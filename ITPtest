@@ -1,0 +1,89 @@
+# importing the module 
+import json
+from collections import namedtuple
+from json import JSONEncoder
+
+
+  
+# Opening JSON file 
+with open('registrants.json') as json_file: 
+    regdata = json.load(json_file) 
+
+    # the index
+    print(regdata['registrant1'][0]) 
+      
+    # nested dict
+    print("\nPrinting nested dicitonary as a key-value pair\n") 
+    for r in data['registrant1']: 
+        print("Name:", r['name']) 
+        print("Email:", r['email']) 
+        print("Phone:", r['phone']) 
+		##and now view values
+        print()
+		
+class contactsList:
+    def __init__(self, listnum, name, email, phone):
+        self.listnum, self.name, self.email, self.phone = listnum, name, email, phone
+
+#list
+contacts = []
+
+####use string values instead of integer incase of weird characters
+
+## Alice Brown / None / 1231112223
+contacts.append(contactsList("Alice Brown", "", "1231112223"))
+## Bob Crown / bob@crowns.com / None
+contacts.append(contactsList("Bob Crown", "bob@crowns.com", ""))
+## Carlos Drew / carl@drewess.com / 3453334445
+contacts.append(contactsList("Carlos Drew", "carl@drewess.com", "34533344445"))
+## Doug Emerty / None / 4564445556
+contacts.append(contactsList("Doug Emerty", "", "4564445556"))
+## Egan Fair / eg@fairness.com / 5675556667
+contacts.append(contactsList("Egan Fair", "eg@fairness.com", "5675556667"))
+
+class leadsList:
+    def __init__(self, listnum, name, email, phone):
+        self.listnum, self.name, self.email, self.phone = listnum, name, email, phone
+
+#list
+leads = []
+
+##None / kevin@keith.com / None
+leads.append(leadsList("", "kevin@keith.com", ""))
+##Lucy / lucy@liu.com / 3210001112
+leads.append(leadsList("Lucy", "lucy@liu.com", "3210001112"))
+##Mary Middle / mary@middle.com / 3331112223
+leads.append("Mary Middle", "mary@middle.com", "3331112223"))
+##None / None / 4442223334
+leads.append("", "", "444222334"))
+##None / ole@olson.com / None
+leads.append("", "ole@olson.com", ""))
+
+
+##insert QA/QC test of values##
+
+###using string values instead of integers incase of weird characters
+
+for email,phone,name in registrant1():
+    if contactsList(email):
+        print(str(email) + 'exists')
+    else:
+        if contactsList(phone)
+            print(str(phone) + 'exists')
+        else:
+            if leadsList(email):
+                contactsList.add((email,phone,name))
+                leadsList.remove((email,phone,name))
+                print('contact has been added')
+            else:
+                if leadsList(phone):
+                    print(str(phone) + 'exists')
+                else:
+                    contactsList.add((email,phone,name))
+                    
+                
+        
+
+
+
+		
